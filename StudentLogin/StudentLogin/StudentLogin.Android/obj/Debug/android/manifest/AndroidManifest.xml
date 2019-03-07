@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.StudentLogin">
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="15" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <application android:label="StudentLogin.Android" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
+    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="StudentLogin" android:theme="@style/MainTheme" android:name="md5c42832101625f1d3a382002a1f14b785.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <receiver android:permission="com.google.android.c2dm.permission.SEND" android:name="md53cf0631209a7bbd5c8c1ceb5be85f526.PushReceiver">
+      <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+        <category android:name="com.companyname.StudentLogin" />
+      </intent-filter>
+    </receiver>
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.companyname.StudentLogin.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.com.companyname.StudentLogin" />
+      </intent-filter>
+    </receiver>
+    <meta-data android:name="android.support.VERSION" android:value="25.4.0" />
+    <service android:name="com.microsoft.appcenter.push.TokenService" p6:ignore="ExportedService" xmlns:p6="http://schemas.android.com/tools">
+      <intent-filter>
+        <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+      </intent-filter>
+    </service>
+    <meta-data android:name="android.support.VERSION" android:value="26.0.2" />
+    <provider android:authorities="com.companyname.StudentLogin.firebaseinitprovider" android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:initOrder="100" />
+    <!-- FirebaseMessagingService performs security checks at runtime,
+             no need for explicit permissions despite exported="true" -->
+    <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="true">
+      <intent-filter android:priority="-500">
+        <action android:name="com.google.firebase.MESSAGING_EVENT" />
+      </intent-filter>
+    </service>
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+  </application>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+</manifest>
