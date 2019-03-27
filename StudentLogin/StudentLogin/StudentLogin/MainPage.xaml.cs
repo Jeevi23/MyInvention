@@ -1,8 +1,6 @@
-﻿using System;
+﻿using Microsoft.AppCenter.Crashes;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace StudentLogin
@@ -12,6 +10,8 @@ namespace StudentLogin
         public MainPage()
         {
             InitializeComponent();
+            var properties = new Dictionary<string, string> { { "Appcenter", "TrackIssue" } };
+            Crashes.TrackError(new Exception(), properties);
         }
     }
 }
