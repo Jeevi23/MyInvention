@@ -1,0 +1,14 @@
+G:\CreativeInvention\StudentLogin\StudentLogin_MVVM\bin\Release\StudentLogin_MVVM.dll
+G:\CreativeInvention\StudentLogin\StudentLogin_MVVM\bin\Release\StudentLogin_MVVM.pdb
+G:\CreativeInvention\StudentLogin\StudentLogin_MVVM\bin\Release\PCLStorage.Abstractions.dll
+G:\CreativeInvention\StudentLogin\StudentLogin_MVVM\bin\Release\PCLStorage.dll
+G:\CreativeInvention\StudentLogin\StudentLogin_MVVM\bin\Release\SQLite-net.dll
+G:\CreativeInvention\StudentLogin\StudentLogin_MVVM\bin\Release\SQLitePCLRaw.batteries_green.dll
+G:\CreativeInvention\StudentLogin\StudentLogin_MVVM\bin\Release\SQLitePCLRaw.batteries_v2.dll
+G:\CreativeInvention\StudentLogin\StudentLogin_MVVM\bin\Release\SQLitePCLRaw.core.dll
+G:\CreativeInvention\StudentLogin\StudentLogin_MVVM\bin\Release\PCLStorage.xml
+G:\CreativeInvention\StudentLogin\StudentLogin_MVVM\bin\Release\PCLStorage.Abstractions.xml
+G:\CreativeInvention\StudentLogin\StudentLogin_MVVM\bin\Release\SQLite-net.xml
+G:\CreativeInvention\StudentLogin\StudentLogin_MVVM\obj\Release\StudentLogin_MVVM.csprojResolveAssemblyReference.cache
+G:\CreativeInvention\StudentLogin\StudentLogin_MVVM\obj\Release\StudentLogin_MVVM.dll
+G:\CreativeInvention\StudentLogin\StudentLogin_MVVM\obj\Release\StudentLogin_MVVM.pdb
