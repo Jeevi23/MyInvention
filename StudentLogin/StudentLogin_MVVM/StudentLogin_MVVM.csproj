@@ -35,9 +35,17 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
-    <Folder Include="Model\" />
+    <Folder Include="Enum\" />
+    <Folder Include="Service\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helper\GlobalValue.cs" />
+    <Compile Include="Helper\SQLiteHelper.cs" />
+    <Compile Include="Entity\AddSectionEntity.cs" />
+    <Compile Include="Entity\EmployeeRegisterEntity.cs" />
+    <Compile Include="Entity\RegisterEntity.cs" />
+    <Compile Include="Entity\RoleTypeEntity.cs" />
+    <Compile Include="Entity\StandardEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
   </ItemGroup>

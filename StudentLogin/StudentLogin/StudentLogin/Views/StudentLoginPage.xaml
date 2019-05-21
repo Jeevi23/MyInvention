@@ -1,12 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="StudentLogin.Views.StudentLoginPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="StudentLogin.Views.StudentLoginPage"  Padding="20">
+    <StackLayout Orientation="Vertical" >
+        <Image Source="student.jpg"  HeightRequest="300"></Image>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="5*" />
+            </Grid.ColumnDefinitions>
+
+            <Label TextColor="Black" VerticalOptions="CenterAndExpand" Text="Username"  Grid.Row="0" Grid.Column="0"  ></Label>
+            <Entry Placeholder="UserID" PlaceholderColor="Gray" x:Name="txtuserid" Grid.Row="0" Grid.Column="1"  ></Entry>
+            <Label TextColor="Black" VerticalOptions="CenterAndExpand" Text="Password"  Grid.Row="1" Grid.Column="0"  ></Label>
+            <Entry IsPassword="True" PlaceholderColor="Gray" x:Name="txtpassword" Placeholder="Password" Grid.Row="1" Grid.Column="1"></Entry>
+            <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand">
+                <Button  Text="Login" Clicked="Login_Clicked"></Button>
+                <Button Text="Cancel"  ></Button>
+            </StackLayout>
+
+        </Grid>
+    </StackLayout>
 </ContentPage>

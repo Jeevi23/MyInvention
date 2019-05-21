@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentLogin.Views.Admin.AddSection" Title="Section">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text ="Add Section"  
+              Priority="1" Order="Secondary" Clicked="ShowCreatingSection" />
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <ListView x:Name="sectionList">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding SectionName}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Grid x:Name="addSection" IsVisible="False">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Text="Create Section!" HorizontalOptions="CenterAndExpand" Grid.Row="0" FontSize="Large" ></Label>
+            <Label Text="SectionName Name :" VerticalOptions="CenterAndExpand" Grid.Row="1"  FontSize="Medium" ></Label>
+            <Entry x:Name="section" HorizontalOptions="CenterAndExpand" Placeholder="Standard" PlaceholderColor="Gray" Grid.Row="1" ></Entry>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Grid.Row="2" Padding="10">
+                <Button Text="Add" Clicked="CreateSection" ></Button>
+                <Button Text="Cancel" Clicked="GoToBack_Clicked" ></Button>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

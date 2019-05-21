@@ -1,12 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="StudentLogin.Views.RegistrationPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+             x:Class="StudentLogin.Views.RegistrationPage" Padding="20">
+    <StackLayout>
+        <Label HorizontalOptions="CenterAndExpand" Text="Portal Registration" TextColor="Black" FontSize="Large" />
+        <Grid HorizontalOptions="StartAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="5*" />
+            </Grid.ColumnDefinitions>
+            <Label TextColor="Black" VerticalOptions="CenterAndExpand" Text="FirstName"  Grid.Row="0" Grid.Column="0"  ></Label>
+            <Entry Placeholder="FirstName" PlaceholderColor="Gray" x:Name="txtfname" Text="{Binding FirstName}" Grid.Row="0" Grid.Column="1" ></Entry>
+            <Label TextColor="Black" VerticalOptions="CenterAndExpand" Text="LastName :" Grid.Row="1" Grid.Column="0"  ></Label>
+            <Entry Placeholder="LastName" PlaceholderColor="Gray" x:Name="txtlname" Text="{Binding LastName}" Grid.Row="1" Grid.Column="1"  ></Entry>
+            <Label TextColor="Black" VerticalOptions="CenterAndExpand" Text="Password :" Grid.Row="2" Grid.Column="0"  ></Label>
+            <Entry IsPassword="True" PlaceholderColor="Gray" x:Name="txtpassword"  Placeholder="Password" Grid.Row="2" Grid.Column="1"></Entry>
+            <Label TextColor="Black" VerticalOptions="CenterAndExpand" Text="Confirm Password :" Grid.Row="3" Grid.Column="0"  ></Label>
+            <Entry IsPassword="True" PlaceholderColor="Gray" x:Name="txtconfirmpwd" Text="{Binding ConfirmPassword}" Placeholder="ConfirmPassword" Grid.Row="3" Grid.Column="1"  ></Entry>
+            <Label TextColor="Black" VerticalOptions="CenterAndExpand" Text="Role" Grid.Row="4" Grid.Column="0"></Label>
+            <Picker ItemDisplayBinding="{Binding RoleName}" Grid.Row="4" Grid.Column="1" SelectedItem="{Binding SelectedRoleId}" ItemsSource="{Binding RoleTypes}" ></Picker>
+            <Label TextColor="Black" VerticalOptions="CenterAndExpand" Grid.Row="5" Grid.Column="0" Text="Standard" ></Label>
+            <Picker ItemDisplayBinding="{Binding StandardClass}" Grid.Row="5" Grid.Column="1" SelectedItem="{Binding SelectedStandardId}" ItemsSource="{Binding Standard}"></Picker>
+            <Label TextColor="Black" VerticalOptions="CenterAndExpand" Text="Section" Grid.Row="6" Grid.Column="0"  ></Label>
+            <Picker ItemDisplayBinding="{Binding SectionName}" Grid.Row="6" Grid.Column="1" SelectedItem="{Binding SelectedSection}" ItemsSource="{Binding Section}"></Picker>
+            <Label TextColor="Black" VerticalOptions="CenterAndExpand" Text="Address" Grid.Row="7" Grid.Column="0"></Label>
+            <Editor x:Name="txtaddress" Grid.Row="7" Grid.Column="1"></Editor>
+        </Grid>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="20">
+            <Button Text="Registration" Clicked="PortalRegistration" ></Button>
+            <Button Text="Cancel"></Button>
         </StackLayout>
-    </ContentPage.Content>
+    </StackLayout>
 </ContentPage>

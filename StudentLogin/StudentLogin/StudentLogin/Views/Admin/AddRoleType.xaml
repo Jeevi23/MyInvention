@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentLogin.Views.Admin.AddRoleType" Padding="20, 20, 0, 0">
+  
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />               
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />                       
+            </Grid.ColumnDefinitions>
+        <Label Text="Add RoleType!" HorizontalOptions="CenterAndExpand" Grid.Row="0" FontSize="Large" ></Label>
+        <Label Text="RoleName :" VerticalOptions="CenterAndExpand" Grid.Row="1"  FontSize="Medium" ></Label>
+        <Entry x:Name="role" HorizontalOptions="CenterAndExpand" Placeholder="RoleName" PlaceholderColor="Gray" Grid.Row="1" ></Entry>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Grid.Row="2" Padding="10">
+              <Button Text="Add RoleType" Clicked="NewRoleType" ></Button>
+              <Button Text="Cancel" ></Button>
+        </StackLayout>
+
+        </Grid>
+
+  
+</ContentPage>
